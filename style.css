@@ -1,0 +1,18 @@
+.search{
+    float: left;
+    display: block;
+    margin-left: 20px;
+    padding-bottom: 30px;
+
+}
+
+.but{
+    float: left;
+    display: block;
+    margin-left: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.form{
+    padding-left:40%;
+}

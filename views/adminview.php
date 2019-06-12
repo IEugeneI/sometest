@@ -47,8 +47,12 @@ require_once ('header/header.php')
     </thead>
     <tbody>
         <?php
+            $allsumm=0;
+            $count=0;
             foreach ($orders as $item) {
+                $count=count($item);
                 for($i=0;$i<count($item);$i++){
+                    $allsumm=$allsumm+$item[$i]['summ'];
                 ?>
                     <tr>
                         <td><?=$item[$i]['id']?></td>
@@ -67,7 +71,11 @@ require_once ('header/header.php')
 
 
 
-
+<?php
+    echo "<p>Общая сумма заказов :  $allsumm</p>";
+    echo "<p>Общая сумма заказов в долларах :".round($allsumm/$dollarprice->price,2)."</p>";
+    echo "<p>Число заказов : $count</p>" ;
+?>
 
 
 

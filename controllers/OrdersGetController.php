@@ -59,7 +59,7 @@ class OrdersGetController
 
             $res=substr_replace($equalsigns[1], '<=', 0, 1);
 
-            $newquery=$equalsigns[0].'summ'.$res;
+            $newquery=$equalsigns[0].'summ'.$res.' ORDER BY id DESC';
             $orders=new OrdersGetModel($newquery);
 
             foreach ($orders as $order)
@@ -70,7 +70,7 @@ class OrdersGetController
 
 
         }else{
-            $orders=new OrdersGetModel('');
+            $orders=new OrdersGetModel('ORDER BY id DESC');
 
         foreach ($orders as $order)
         {

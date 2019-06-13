@@ -47,7 +47,7 @@ class OrdersGetController
                 if($this->filter[$k]['name']=='town')
                 {
                     $val=$this->filter[$k]['val'];
-                    $query[$k]=$this->filter[$k]['name']."='".$val."'";
+                    $query[$k]=$this->filter[$k]['name']." LIKE '%".$val."%'";
                 }else{
                 $query[$k]=$this->filter[$k]['name'].'='.$this->filter[$k]['val'];}
 
